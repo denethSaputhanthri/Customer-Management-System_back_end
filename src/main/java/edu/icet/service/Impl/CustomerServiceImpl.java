@@ -36,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDto searchById(Integer customerId) {
-        return null;
+        return mapper.map(repository.findById(customerId).get(),CustomerDto.class);
     }
 
     @Override

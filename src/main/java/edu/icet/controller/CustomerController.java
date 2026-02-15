@@ -31,6 +31,11 @@ public class CustomerController {
        service.deleteCustomer(customerId);
     }
 
+    @GetMapping("/searchById/{customerId}")
+    public CustomerDto searchById(@PathVariable Integer customerId){
+        return service.searchById(customerId);
+    }
+
     @GetMapping("/get/details")
     public List<CustomerDto> getAll(){
         return service.getAll();
