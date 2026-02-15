@@ -17,12 +17,12 @@ public class CustomerController {
     final private CustomerService service;
 
     @PostMapping("/add/details")
-    public void addCustomer(CustomerDto customer){
+    public void addCustomer(@RequestBody CustomerDto customer){
         service.addCustomer(customer);
     }
 
     @PutMapping("/update/details")
-    public void updateCustomer(CustomerDto customer){
+    public void updateCustomer(@RequestBody CustomerDto customer){
         service.updateCustomer(customer);
     }
 
