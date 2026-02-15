@@ -2,6 +2,7 @@ package service.Impl;
 
 import lombok.RequiredArgsConstructor;
 import model.dto.CustomerDto;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import repository.CustomerRepository;
 import service.CustomerService;
@@ -13,6 +14,7 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     final private CustomerRepository repository;
+    final private ModelMapper mapper;
 
     @Override
     public Boolean addCustomer(CustomerDto customer) {
