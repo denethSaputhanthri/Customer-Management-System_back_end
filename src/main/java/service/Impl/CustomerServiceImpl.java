@@ -1,13 +1,18 @@
 package service.Impl;
 
+import lombok.RequiredArgsConstructor;
 import model.dto.CustomerDto;
 import org.springframework.stereotype.Service;
+import repository.CustomerRepository;
 import service.CustomerService;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
+
+    final private CustomerRepository repository;
 
     @Override
     public Boolean addCustomer(CustomerDto customer) {
