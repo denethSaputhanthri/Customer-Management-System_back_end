@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import edu.icet.repository.CustomerRepository;
 import edu.icet.service.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -40,6 +41,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<CustomerDto> getAll() {
-        return List.of();
+        List<CustomerEntity>entities=repository.findAll();
+        ArrayList<CustomerDto>customerDtoArrayList=new ArrayList<>();
+        entities.forEach(customerEntity -> {
+            customerDtoArrayList.add(mapper.map(customerEntity,CustomerDto.class));
+        });
+        return customerDtoArrayList;
     }
 }
