@@ -20,7 +20,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void addCustomer(CustomerDto customer) {
-
+        repository.save(mapper.map(customer, CustomerEntity.class));
     }
 
     @Override

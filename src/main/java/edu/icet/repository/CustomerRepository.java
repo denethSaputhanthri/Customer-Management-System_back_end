@@ -1,6 +1,6 @@
-package repository;
+package edu.icet.repository;
 
-import model.entity.CustomerEntity;
+import edu.icet.model.entity.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<CustomerEntity,Integer>{
