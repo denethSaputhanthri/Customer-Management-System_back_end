@@ -1,11 +1,12 @@
-package service.Impl;
+package edu.icet.service.Impl;
 
 import lombok.RequiredArgsConstructor;
-import model.dto.CustomerDto;
+import edu.icet.model.dto.CustomerDto;
+import edu.icet.model.entity.CustomerEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import repository.CustomerRepository;
-import service.CustomerService;
+import edu.icet.repository.CustomerRepository;
+import edu.icet.service.CustomerService;
 
 import java.util.List;
 
@@ -16,19 +17,20 @@ public class CustomerServiceImpl implements CustomerService {
     final private CustomerRepository repository;
     final private ModelMapper mapper;
 
+
     @Override
-    public Boolean addCustomer(CustomerDto customer) {
-        return null;
+    public void addCustomer(CustomerDto customer) {
+
     }
 
     @Override
-    public Boolean updateCustomer(CustomerDto customer) {
-        return null;
+    public void updateCustomer(CustomerDto customer) {
+
     }
 
     @Override
-    public Boolean deleteCustomer(Integer customerId) {
-        return null;
+    public void deleteCustomer(Integer customerId) {
+
     }
 
     @Override
