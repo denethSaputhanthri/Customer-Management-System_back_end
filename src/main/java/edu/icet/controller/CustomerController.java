@@ -1,7 +1,6 @@
 package edu.icet.controller;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.Generated;
 import lombok.RequiredArgsConstructor;
 import edu.icet.model.dto.CustomerDto;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +24,11 @@ public class CustomerController {
     @PutMapping("/update/details")
     public void updateCustomer(CustomerDto customer){
         service.updateCustomer(customer);
+    }
+
+    @DeleteMapping("/delete/details/{customerId}")
+    public void deleteCustomer(@PathVariable Integer customerId){
+       service.deleteCustomer(customerId);
     }
 
     @GetMapping("/get/details")
